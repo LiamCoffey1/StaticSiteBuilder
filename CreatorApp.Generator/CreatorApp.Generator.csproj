@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CreatorApp.Domain\CreatorApp.Domain.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- Embed templates so consumers get them when referencing the DLL -->
+    <EmbeddedResource Include="Templates\**\*.html" />
+    <!-- Also copy templates to output for easy local overrides -->
+    <None Include="Templates\**\*.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>

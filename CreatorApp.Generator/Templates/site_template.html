@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Website Template</title>
+    <style>
+        body {
+            width: 100vw;
+            margin:0px;
+        }
+        .btn-primary {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            border: none;
+            border-radius: 4px;
+            background-color: #007bff; /* Blue background */
+            color: white; /* White text */
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+            .btn-primary:hover {
+                background-color: #0056b3; /* Darker blue on hover */
+                transform: translateY(-2px); /* Slight lift effect */
+            }
+
+            .btn-primary:focus {
+                outline: none;
+                box-shadow: 0 0 0 3px rgba(38, 143, 255, 0.5); /* Focus outline */
+            }
+
+            .btn-primary:active {
+                background-color: #004085; /* Even darker blue when pressed */
+                transform: translateY(0); /* Reset lift effect on click */
+            }
+
+            .btn-primary:disabled {
+                background-color: #c6c6c6; /* Greyed-out background for disabled state */
+                cursor: not-allowed;
+            }
+
+        .column {
+            grid-column: span var(--span, 1); /* Default span is 1 if not specified */
+        }
+
+            .column:nth-child(1) {
+                grid-column: span calc(var(--spans, '4') 1);
+            }
+
+            .column:nth-child(2) {
+                grid-column: span 4;
+            }
+
+        /* Align text to the left */
+        .ql-align-left {
+            text-align: left;
+        }
+
+        /* Align text to the center */
+        .ql-align-center {
+            text-align: center;
+        }
+
+        /* Align text to the right */
+        .ql-align-right {
+            text-align: right;
+        }
+
+        /* Justify the text */
+        .ql-align-justify {
+            text-align: justify;
+        }
+        /* Define the fonts for the editor content */
+        .ql-font-Inter {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .ql-font-Poppins {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Ensure the toolbar reflects the custom fonts */
+        .ql-snow .ql-picker.ql-font .ql-picker-label::before {
+            content: 'Sans Serif'; /* Default to Sans Serif */
+        }
+
+        .ql-snow .ql-picker.ql-font .ql-picker-item[data-value='Inter']::before {
+            content: 'Inter'; /* Add Inter option to the toolbar */
+        }
+
+        .ql-snow .ql-picker.ql-font .ql-picker-item[data-value='Poppins']::before {
+            content: 'Poppins'; /* Add Poppins option to the toolbar */
+        }
+
+        /* Make sure the toolbar has font names visible */
+        .ql-font-Inter {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .ql-font-Poppins {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* General styling for the font picker */
+        .ql-snow .ql-picker.ql-font .ql-picker-item {
+            font-family: 'Arial', sans-serif;
+        }
+
+        .ql-snow .ql-picker.ql-fontWeight .ql-picker-item[data-value="400"]::before {
+            content: "Regular";
+        }
+
+        .ql-snow .ql-picker.ql-fontWeight .ql-picker-item[data-value="500"]::before {
+            content: "Medium";
+        }
+
+        .ql-snow .ql-picker.ql-fontWeight .ql-picker-item[data-value="600"]::before {
+            content: "Semi Bold";
+        }
+
+        .ql-snow .ql-picker.ql-fontWeight .ql-picker-item[data-value="700"]::before {
+            content: "Bold";
+        }
+
+
+        .ql-snow .ql-picker.ql-fontSize .ql-picker-item[data-value="12px"]::before {
+            content: "12px";
+        }
+
+        .ql-snow .ql-picker.ql-fontSize .ql-picker-item[data-value="16px"]::before {
+            content: "16px";
+        }
+
+        .ql-snow .ql-picker.ql-fontSize .ql-picker-item[data-value="20px"]::before {
+            content: "20px";
+        }
+
+        .ql-snow .ql-picker.ql-fontSize .ql-picker-item[data-value="24px"]::before {
+            content: "24px";
+        }
+
+        .ql-snow .ql-picker.ql-fontSize .ql-picker-item[data-value="32px"]::before {
+            content: "32px";
+        }
+    </style>
+    {styles}
+</head>
+   <script>
+       function toggleVisibility(className) {
+           // Find all elements with the given class name
+           const elements = document.querySelectorAll(`.${className}`);
+
+           // Loop through each element and toggle its visibility
+           elements.forEach(element => {
+               if (element.style.display === 'none') {
+                   element.style.display = 'block'; // Reset to default (visible)
+               } else {
+                   element.style.display = 'none'; // Hide the element
+               }
+           });
+       }
+
+   </script>
+
+    <!-- Empty content area, add your content here -->
+    {content}
+
+
+</html>
