@@ -373,8 +373,6 @@ wwwroot/
 # StaticSiteService generated sites
 CreatorApp.StaticSiteService/StaticSites/
 CreatorApp.StaticSiteService/staticsites/
-/CreatorApp.StaticSiteService/StaticSites/id_1/test2.html
-/CreatorApp.StaticSiteService/wwwroot/uploads/1/d4ydavas.fb0.png
-/CreatorApp.Server/AppData/creatorapp.db
+/CreatorApp.Server/AppData/
 *.db-shm
 *.db-wal
